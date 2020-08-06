@@ -23,11 +23,11 @@ Input arguments:
 The following will get images from category `universe` while starting from page `1`, ending at page `1` and only getting `10` images per page.
 
 ```python
-python main_scraper.py -k "lVkECaSAqkFNAq5rQKutrqvXsTW6ySCjejeV9B8M5yN7MLek2H0Ft7ZG" -c "universe" -d "D:\Documents\pexels" -p 1 1 10
+python pexels_scraper.py -k "lVkECaSAqkFNAq5rQKutrqvXsTW6ySCjejeV9B8M5yN7MLek2H0Ft7ZG" -c "universe" -d "D:\Documents\pexels" -p 1 1 10
 ```
 
 The following will get images from category `nature` and get every image available, but verbose mode is turned off.
 
 ```python
-python main_scraper.py -k "lVkECaSAqkFNAq5rQKutrqvXsTW6ySCjejeV9B8M5yN7MLek2H0Ft7ZG" -c "nature" -d "D:\Documents\pexels" -p -1 -v 0
+python pexels_scraper.py -k "lVkECaSAqkFNAq5rQKutrqvXsTW6ySCjejeV9B8M5yN7MLek2H0Ft7ZG" -c "nature" -d "D:\Documents\pexels" -p -1 -v 0
 ```
