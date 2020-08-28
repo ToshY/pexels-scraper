@@ -2,7 +2,7 @@
 """
 Created on Sat Aug  1 00:50:01 2020
 
-@author: ToishY
+@author: ToshY
 
 Simple scraper with Pexels API
 """
