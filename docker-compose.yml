@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  pexels-scraper:
+    build:
+      context: .
+      target: dev
+      dockerfile: Dockerfile
+    user: "${UID}:${GID}"
+    volumes:
+      - ./:/app
+      - ./output:/output

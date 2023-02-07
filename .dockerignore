@@ -1,0 +1,14 @@
+.git
+.gitignore
+.github
+.idea
+.dockerignore
+Dockerfile
+docker-compose.yml
+**/__pycache__
+**/*.pyc
+.pre-commit-config.yaml
+.task
+Taskfile.yml
+README.md
+output

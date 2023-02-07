@@ -1,0 +1,32 @@
+name: Pip audit
+
+on:
+  push:
+    branches:
+      - master
+  pull_request_target:
+    branches:
+      - master
+
+jobs:
+  security:
+    name: Run pip-audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install requirements
+        run: |
+          pip install -r requirements.txt
+          pip install --no-cache-dir --upgrade --force-reinstall 'setuptools>=65.5.1'
+
+      - name: Pip audit
+        uses: pypa/gh-action-pip-audit@v1.0.2
