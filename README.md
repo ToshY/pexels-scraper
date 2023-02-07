@@ -1,11 +1,11 @@
 <h1 align="center"> 🖼️ Pexels scraper </h1>
 
 <div align="center">
-    <img src="https://img.shields.io/github/v/release/toshy/pexels-scraper?label=Release&sort=semver" alt="Current bundle version" />
+    <a href="https://hub.docker.com/r/t0shy/pexels-scraper/tags"><img src="https://img.shields.io/github/v/release/toshy/pexels-scraper?label=Release&sort=semver" alt="Current bundle version" /></a>
     <a href="https://hub.docker.com/r/t0shy/pexels-scraper"><img src="https://img.shields.io/badge/Docker%20Hub-t0shy%2Fpexels--scraper-blue" alt="Docker Hub" /></a>
-    <img src="https://img.shields.io/github/actions/workflow/status/toshy/pexels-scraper/pylint.yml?branch=main&label=Pylint" alt="Code style">
+    <img src="https://img.shields.io/github/actions/workflow/status/toshy/pexels-scraper/pylint.yml?branch=master&label=Pylint" alt="Code style">
     <img src="https://img.shields.io/badge/Code%20Style-PEP8-orange.svg" alt="Code style" />
-    <img src="https://img.shields.io/github/actions/workflow/status/toshy/pexels-scraper/security.yml?branch=main&label=Security%20check" alt="Security check" />
+    <img src="https://img.shields.io/github/actions/workflow/status/toshy/pexels-scraper/security.yml?branch=master&label=Security%20check" alt="Security check" />
     <br /><br />
 A python command-line tool for scraping images from <a href="https://www.pexels.com/">Pexels.com</a> by topic search.
 </div>
