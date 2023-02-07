@@ -1,0 +1,62 @@
+version: '3'
+
+vars:
+  SERVICE: pexels-scraper
+
+env:
+  UID:
+    sh: id -u
+  GID:
+    sh: id -g
+
+tasks:
+  default:
+    cmds:
+      - task --list
+
+  # Application
+  run:
+    desc: Extract subtitles, attachments, chapters and tags
+    summary: |
+      Example:
+      * task run -- -k "37c01053e18949935e52c0e9ddabc706166de7ca42c8357f0f4bf93e" -p '{"query":"Nature","page":1,"per_page":15}' -v
+    cmds:
+      - mkdir -p ${PWD}/output
+      - docker compose run --rm {{.SERVICE}} python main.py {{.CLI_ARGS}}
+
+  up:
+    desc: Up service
+    cmds:
+      - docker compose up -d --build --force-recreate --no-deps --remove-orphans
+
+  down:
+    desc: Down service
+    cmds:
+      - docker compose down --remove-orphans
+
+  # Tools
+  contribute:
+    desc: Tasks for contributing
+    cmds:
+      - task: pylint
+      - task: pycodestyle
+
+  pylint:
+    desc: Run pylint
+    cmds:
+      - docker compose run -u root --rm {{.SERVICE}} pylint --max-line-length=120 --recursive=y .
+
+  pycodestyle:
+    desc: Run pycodestyle
+    cmds:
+      - docker compose run -u root --rm {{.SERVICE}} pycodestyle --max-line-length=120 --show-source .
+
+  black:
+    desc: Run black dryrun
+    cmds:
+      - docker compose run -u root --rm {{.SERVICE}} black . --diff --color
+
+  black:fix:
+    desc: Run black
+    cmds:
+      - docker compose run -u root --rm {{.SERVICE}} black .
