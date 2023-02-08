@@ -38,7 +38,7 @@ the [API documentation](https://www.pexels.com/api/documentation/#photos-search)
 ```shell
 docker run -it --rm \
   -u $(id -u):$(id -g) \
-  -v ${PWD}/pexels/results:/output \
+  -v $(pwd)/pexels/results:/output \
   t0shy/pexels-scraper:latest \
   -k "37c01053e18949935e52c0e9ddabc706166de7ca42c8357f0f4bf93e" \
   -p '{"query":"Nature"}'
