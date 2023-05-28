@@ -1,5 +1,5 @@
 pyfiglet==0.8.post1
-requests==2.28.2
+requests==2.31.0
 rich==13.3.1
 pylint==2.16.1
 pycodestyle==2.10.0
