@@ -29,4 +29,4 @@ jobs:
           pip install --no-cache-dir --upgrade --force-reinstall 'setuptools>=65.5.1'
 
       - name: Pip audit
-        uses: pypa/gh-action-pip-audit@v1.0.6
+        uses: pypa/gh-action-pip-audit@v1.0.8
